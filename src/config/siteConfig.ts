@@ -52,7 +52,7 @@ export type AdvisorSiteConfig = {
 };
 
 export const advisorSiteConfig: AdvisorSiteConfig = {
-	siteUrl: "https://clearpathhealthadvisors.com", // 🔁 update if different
+	siteUrl: "https://clearpath.elevatedevworks.com",
 	brandName: "ClearPath Health Advisors",
 	brandShortName: "ClearPath Health",
 	tagline: "Plain-language guidance for Medicare & health coverage.",
@@ -71,7 +71,7 @@ export const advisorSiteConfig: AdvisorSiteConfig = {
 
 	serviceAreas: ["Virginia", "North Carolina", "Maryland"],
 
-	officeHours: "Monday–Friday, 9:00 AM – 5:00 PM",
+	officeHours: "Monday-Friday, 9:00 AM - 5:00 PM",
 
 	contactCopy: {
 		primaryCtaLabel: "Book Your Free Coverage Review",
