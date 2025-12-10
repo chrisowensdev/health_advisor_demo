@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/plans</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/about</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/faqs</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/resources</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/contact</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Resource posts -->
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/resources/medicare-vs-medigap-whats-the-difference</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/resources/open-enrollment-vs-special-enrollment</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clearpath.elevatedevworks.com/resources/understanding-out-of-pocket-costs</loc>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://clearpath.elevatedevworks.com/resources/medicare-prescription-drug-coverage-basics</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

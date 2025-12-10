@@ -6,6 +6,7 @@ import { site } from "@/content/site";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
 import TextArea from "./TextArea";
+import { advisorSiteConfig } from "@/config/siteConfig";
 
 export default function ContactForm() {
 	// basic client-side state & validation
@@ -50,11 +51,14 @@ export default function ContactForm() {
 		};
 
 		try {
-			const res = await fetch("https://elevatedevworks.com/contact.php", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(payload),
-			});
+			const res = await fetch(
+				`${advisorSiteConfig.siteUrl}/contact.php`,
+				{
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(payload),
+				}
+			);
 
 			const json = await res.json().catch(() => null);
 			if (!res.ok || !json?.ok) {
@@ -182,7 +186,7 @@ export default function ContactForm() {
 						{status === "sending" ? "Sending…" : "Send message"}
 					</button>
 					<Link
-						href={`mailto:${site.supportEmail}`}
+						href={`mailto:${advisorSiteConfig.email}`}
 						className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:bg-slate-50"
 					>
 						Email me directly

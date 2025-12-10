@@ -1,4 +1,5 @@
-// lib/resources.ts
+import "server-only";
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -22,6 +23,10 @@ export type Resource = ResourceMeta & {
 };
 
 export function getResourceSlugs(): string[] {
+	if (!fs.existsSync(resourcesDir)) {
+		return [];
+	}
+
 	return fs
 		.readdirSync(resourcesDir)
 		.filter((file) => file.endsWith(".md"))
