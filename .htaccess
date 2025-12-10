@@ -6,9 +6,9 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} !^elevatedevworks\.com$ [NC,OR]
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://elevatedevworks.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://clearpath.elevatedevworks.com%{REQUEST_URI} [L,R=301]
 
-RewriteRule ^(.\*/)?index\.(html?|php)$ https://elevatedevworks.com/$1 [L,R=301,NC]
+RewriteRule ^(.\*/)?index\.(html?|php)$ https://clearpath.elevatedevworks.com/$1 [L,R=301,NC]
 
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
