@@ -2,20 +2,21 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { text, display } from "./fonts";
 import { Header, Footer } from "@/components/layout";
+import { advisorSiteConfig } from "@/config/siteConfig";
 
 export const viewport: Viewport = { themeColor: "#2175a2" };
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://elevatedevworks.com"),
+	metadataBase: new URL(advisorSiteConfig.siteUrl),
 	title: {
-		default: "ClearPath Health Advisors - Web/Application Development",
-		template: "%s | Elevate DevWorks - Web/Application Development",
+		default: "ClearPath Health Advisors",
+		template: "%s | ClearPath HealthAdvisors",
 	},
-	description: "Building High-Quality Websites for Business",
+	description: "Licensed Health & Medicare Guidance",
 	openGraph: {
 		type: "website",
-		url: "https://elevatedevworks.com",
-		siteName: "Elevate DevWorks",
+		url: "https://clearpath.elevatedevworks.com",
+		siteName: "ClearPath - Health Advisors",
 		images: [
 			{
 				url: "/elevate_devworks_seo_image.png",
@@ -27,9 +28,11 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		images: ["https://elevatedevworks.com/elevate_devworks_seo_image.png"],
+		images: [
+			"https://clearpath.elevatedevworks.com/elevate_devworks_seo_image.png",
+		],
 	},
-	alternates: { canonical: "https://elevatedevworks.com" },
+	alternates: { canonical: "https://clearpath.elevatedevworks.com" },
 
 	icons: {
 		// If you prefer explicit control in addition to app/icon.png:

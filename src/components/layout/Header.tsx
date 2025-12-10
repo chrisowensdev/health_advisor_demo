@@ -1,11 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import Container from "./Container";
 import Link from "next/link";
-
-const BRAND = { primary: "#2175a2", accent: "#21a37c" };
 
 export default function Header() {
 	const [mobileOpen, setMobileOpen] = useState(false);
