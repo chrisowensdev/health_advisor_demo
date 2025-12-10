@@ -1,5 +1,4 @@
-import { site } from "@/content/site";
-
+import { advisorSiteConfig } from "@/config/siteConfig";
 export default function SEOJsonLd() {
 	const baseUrl = "https://elevatedevworks.com";
 
@@ -15,7 +14,7 @@ export default function SEOJsonLd() {
 					"Elevate DevWorks is a Richmond, VA-based web and software development company specializing in custom websites, web apps, and mobile applications.",
 				image: `${baseUrl}/elevate_devworks_seo_image.png`, // or your logo
 				logo: `${baseUrl}/elevate-logo-symbol-48x48.png`,
-				telephone: site.phone ?? undefined,
+				telephone: advisorSiteConfig.phone ?? undefined,
 				address: {
 					"@type": "PostalAddress",
 					addressLocality: "Richmond",

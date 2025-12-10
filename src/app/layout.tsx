@@ -9,30 +9,28 @@ export const viewport: Viewport = { themeColor: "#2175a2" };
 export const metadata: Metadata = {
 	metadataBase: new URL(advisorSiteConfig.siteUrl),
 	title: {
-		default: "ClearPath Health Advisors",
-		template: "%s | ClearPath HealthAdvisors",
+		default: `${advisorSiteConfig.brandName}`,
+		template: `%s | ${advisorSiteConfig.brandName}`,
 	},
-	description: "Licensed Health & Medicare Guidance",
+	description: advisorSiteConfig.tagline,
 	openGraph: {
 		type: "website",
-		url: "https://clearpath.elevatedevworks.com",
+		url: advisorSiteConfig.siteUrl,
 		siteName: "ClearPath - Health Advisors",
 		images: [
 			{
 				url: "/elevate_devworks_seo_image.png",
 				width: 1200,
 				height: 630,
-				alt: "Elevate DevWorks",
+				alt: advisorSiteConfig.brandName,
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		images: [
-			"https://clearpath.elevatedevworks.com/elevate_devworks_seo_image.png",
-		],
+		images: [`${advisorSiteConfig.siteUrl}/elevate_devworks_seo_image.png`],
 	},
-	alternates: { canonical: "https://clearpath.elevatedevworks.com" },
+	alternates: { canonical: advisorSiteConfig.siteUrl },
 
 	icons: {
 		// If you prefer explicit control in addition to app/icon.png:
