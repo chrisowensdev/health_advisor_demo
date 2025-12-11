@@ -9,8 +9,8 @@ export const viewport: Viewport = { themeColor: "#2175a2" };
 export const metadata: Metadata = {
 	metadataBase: new URL(advisorSiteConfig.siteUrl),
 	title: {
-		default: `${advisorSiteConfig.brandName}`,
-		template: `%s | ${advisorSiteConfig.brandName}`,
+		default: `${advisorSiteConfig.brandName} - Demo Website`,
+		template: `%s | ${advisorSiteConfig.brandName} - Demo Website`,
 	},
 	description: advisorSiteConfig.tagline,
 	openGraph: {
