@@ -1,3 +1,5 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
+
 export default function FinalCTA() {
 	return (
 		<section className="bg-teal-500 py-14">
@@ -16,7 +18,7 @@ export default function FinalCTA() {
 					href="/contact"
 					className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-teal-600 shadow-sm hover:bg-teal-50"
 				>
-					Book Your Free Coverage Review
+					{advisorSiteConfig.contactCopy.primaryCtaLabel}
 				</a>
 			</div>
 		</section>

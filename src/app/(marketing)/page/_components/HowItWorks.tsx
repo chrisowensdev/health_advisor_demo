@@ -1,3 +1,5 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
+
 export default function HowItWorks() {
 	return (
 		<section className="bg-white py-20">
@@ -64,7 +66,7 @@ export default function HowItWorks() {
 						href="/contact"
 						className="rounded-full bg-teal-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 					>
-						Start Your Free Coverage Review
+						{advisorSiteConfig.contactCopy.primaryCtaLabel}
 					</a>
 				</div>
 			</div>

@@ -1,3 +1,5 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
+
 export default function WhyClientsChooseMe() {
 	return (
 		<section className="bg-slate-50 py-20">
@@ -81,7 +83,7 @@ export default function WhyClientsChooseMe() {
 						href="/contact"
 						className="mt-4 inline-flex items-center justify-center rounded-full bg-teal-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 					>
-						Talk Through Your Options
+						{advisorSiteConfig.contactCopy.primaryCtaLabel}
 					</a>
 				</div>
 			</div>

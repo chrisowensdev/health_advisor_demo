@@ -75,7 +75,7 @@ export const advisorSiteConfig: AdvisorSiteConfig = {
 
 	contactCopy: {
 		primaryCtaLabel: "Book Your Free Coverage Review",
-		secondaryCtaLabel: "Ask a Question",
+		secondaryCtaLabel: "Call with a Quick Question",
 		responseTime: "Typically responds within one business day.",
 	},
 
