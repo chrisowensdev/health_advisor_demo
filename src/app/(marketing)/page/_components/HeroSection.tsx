@@ -1,3 +1,4 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -6,7 +7,7 @@ export default function HeroSection() {
 			{/* Mobile background image (dimmed) */}
 			<div className="absolute inset-0 md:hidden">
 				<Image
-					src="/health_advisor_bg_1.png" // use same image if you want
+					src="/health-advisor-bg.png" // use same image if you want
 					alt="Advisor discussing health coverage options"
 					fill
 					priority
@@ -17,7 +18,7 @@ export default function HeroSection() {
 			{/* Desktop right-side image */}
 			<div className="absolute inset-y-0 right-0 hidden md:block md:w-full">
 				<Image
-					src="/health_advisor_bg_1.png"
+					src="/health-advisor-bg.png"
 					alt="Advisor discussing health coverage options"
 					fill
 					priority
@@ -58,13 +59,16 @@ export default function HeroSection() {
 							href="/contact"
 							className="rounded-full bg-teal-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 						>
-							Book Your Free Coverage Review
+							{advisorSiteConfig.contactCopy.primaryCtaLabel}
 						</a>
 						<a
-							href="tel:5551234567"
+							href={`tel:${advisorSiteConfig.phone.replaceAll(
+								"-",
+								""
+							)}`}
 							className="rounded-full border border-slate-600/60 bg-slate-900/40 px-5 py-2.5 text-sm font-medium text-slate-100 hover:bg-slate-900/70"
 						>
-							Call with a Quick Question
+							{advisorSiteConfig.contactCopy.secondaryCtaLabel}
 						</a>
 					</div>
 

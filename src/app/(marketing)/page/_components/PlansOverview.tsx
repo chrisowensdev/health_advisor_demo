@@ -1,3 +1,5 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
+
 export default function PlansOverview() {
 	return (
 		<section id="plans" className="bg-slate-50 py-16">
@@ -116,7 +118,7 @@ export default function PlansOverview() {
 						href="/contact"
 						className="mt-2 inline-flex items-center justify-center rounded-full bg-teal-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-400 sm:mt-0"
 					>
-						Start with a Free Coverage Review
+						{advisorSiteConfig.contactCopy.primaryCtaLabel}
 					</a>
 				</div>
 			</div>

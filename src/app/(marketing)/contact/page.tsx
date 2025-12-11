@@ -1,3 +1,4 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
 import ContactForm from "./_components/ContactForm";
 
 export default function ContactPage() {
@@ -58,23 +59,25 @@ export default function ContactPage() {
 								<p className="mt-2">
 									Phone:{" "}
 									<a
-										href="tel:5551234567"
+										href={`tel:${advisorSiteConfig.phone.replaceAll(
+											"-",
+											""
+										)}`}
 										className="text-teal-600 hover:text-teal-700"
 									>
-										555-123-4567
+										{advisorSiteConfig.phone}
 									</a>
 									<br />
 									Email:{" "}
 									<a
-										href="mailto:info@advisor.com"
+										href={`mailto:${advisorSiteConfig.email}`}
 										className="text-teal-600 hover:text-teal-700"
 									>
-										info@advisor.com
+										{advisorSiteConfig.email}
 									</a>
 								</p>
 								<p className="mt-2 text-xs text-slate-500">
-									Typical response time: within one business
-									day.
+									{advisorSiteConfig.contactCopy.responseTime}
 								</p>
 							</div>
 						</div>
@@ -85,10 +88,9 @@ export default function ContactPage() {
 
 					{/* Disclaimer under everything */}
 					<p className="mt-10 text-xs text-slate-500">
-						Not connected with or endorsed by the U.S. Government or
-						the federal Medicare program. This is a solicitation of
-						insurance. If you respond to this offer, an insurance
-						agent may contact you.
+						{advisorSiteConfig.legal.notGovernmentAffiliationText}{" "}
+						If you respond to this offer, an insurance agent may
+						contact you.
 					</p>
 				</div>
 			</section>

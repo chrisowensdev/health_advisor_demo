@@ -20,64 +20,82 @@ export default function ContactForm() {
 	>("idle");
 	const [startedAt, setStartedAt] = useState<number>(() => Date.now());
 
+	// Demo
+	const [demoNotice, setDemoNotice] = useState(false);
+
 	async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
-		if (status === "sending") return;
-		setStatus("sending");
-		setError(null);
 
-		const form = e.currentTarget;
-		const fd = new FormData(form);
+		// Instead of actually sending data:
+		setStatus("success");
+		setDemoNotice(true);
 
-		// honeypot: if bots fill this, bail silently
-		const website = (fd.get("website") as string) || "";
-		if (website.length) {
-			setStatus("success");
-			form.reset();
-			setStartedAt(Date.now());
-			return;
-		}
+		// Reset form fields if desired
+		e.currentTarget.reset();
 
-		const payload = {
-			name: fd.get("name"),
-			email: fd.get("email"),
-			message: fd.get("message"),
-			// keep the same key "budget" for backend, but repurpose the meaning
-			budget: fd.get("budget"),
-			website, // honeypot field (empty for humans)
-			startedAt, // ms epoch captured on mount
-			userAgent: navigator.userAgent,
-		};
-
-		try {
-			const res = await fetch(
-				`${advisorSiteConfig.siteUrl}/contact.php`,
-				{
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify(payload),
-				}
-			);
-
-			const json = await res.json().catch(() => null);
-			if (!res.ok || !json?.ok) {
-				setError(json?.error ?? "Something went wrong.");
-				setStatus("error");
-				return;
-			}
-
-			form.reset();
-			setName("");
-			setEmail("");
-			setNeed("");
-			setMessage("");
-			setStartedAt(Date.now());
-			setStatus("success");
-		} catch {
-			setError("Network error. Please try again.");
-			setStatus("error");
-		}
+		return;
 	}
+
+	// Section Commented out for functional form
+
+	// async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+	// 	e.preventDefault();
+	// 	if (status === "sending") return;
+	// 	setStatus("sending");
+	// 	setError(null);
+
+	// 	const form = e.currentTarget;
+	// 	const fd = new FormData(form);
+
+	// 	// honeypot: if bots fill this, bail silently
+	// 	const website = (fd.get("website") as string) || "";
+	// 	if (website.length) {
+	// 		setStatus("success");
+	// 		form.reset();
+	// 		setStartedAt(Date.now());
+	// 		return;
+	// 	}
+
+	// 	const payload = {
+	// 		name: fd.get("name"),
+	// 		email: fd.get("email"),
+	// 		message: fd.get("message"),
+	// 		// keep the same key "budget" for backend, but repurpose the meaning
+	// 		budget: fd.get("budget"),
+	// 		website, // honeypot field (empty for humans)
+	// 		startedAt, // ms epoch captured on mount
+	// 		userAgent: navigator.userAgent,
+	// 	};
+
+	// 	try {
+	// 		const res = await fetch(
+	// 			`${advisorSiteConfig.siteUrl}/contact.php`,
+	// 			{
+	// 				method: "POST",
+	// 				headers: { "Content-Type": "application/json" },
+	// 				body: JSON.stringify(payload),
+	// 			}
+	// 		);
+
+	// 		const json = await res.json().catch(() => null);
+	// 		if (!res.ok || !json?.ok) {
+	// 			setError(json?.error ?? "Something went wrong.");
+	// 			setStatus("error");
+	// 			return;
+	// 		}
+
+	// 		form.reset();
+	// 		setName("");
+	// 		setEmail("");
+	// 		setNeed("");
+	// 		setMessage("");
+	// 		setStartedAt(Date.now());
+	// 		setStatus("success");
+	// 	} catch {
+	// 		setError("Network error. Please try again.");
+	// 		setStatus("error");
+	// 	}
+	// }
 
 	return (
 		<div className="lg:col-span-2">
@@ -170,6 +188,12 @@ export default function ContactForm() {
 					<p className="mt-4 text-sm text-teal-600">
 						Thank you — your message has been received. I’ll get
 						back to you shortly.
+					</p>
+				)}
+				{demoNotice && (
+					<p className="mt-3 rounded-md bg-yellow-50 p-3 text-sm text-yellow-900">
+						This is a demo website. Submissions are not sent to a
+						live inbox.
 					</p>
 				)}
 				{status === "error" && (
