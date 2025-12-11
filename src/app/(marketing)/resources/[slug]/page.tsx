@@ -59,6 +59,11 @@ export default async function ResourceArticlePage({
 					/>
 				</div>
 			</section>
+
+			<p className="text-xs text-slate-400 mt-6">
+				This article is demonstration content for a sample advisor
+				website.
+			</p>
 		</main>
 	);
 }

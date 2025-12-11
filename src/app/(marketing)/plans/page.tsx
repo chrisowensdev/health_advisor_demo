@@ -1,3 +1,4 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
 import Link from "next/link";
 
 export default function PlansPage() {
@@ -309,7 +310,7 @@ export default function PlansPage() {
 						href="/contact"
 						className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-teal-600 shadow-sm hover:bg-teal-50"
 					>
-						Start with a Free Coverage Review
+						{advisorSiteConfig.contactCopy.primaryCtaLabel}
 					</Link>
 				</div>
 			</section>

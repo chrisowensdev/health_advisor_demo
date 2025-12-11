@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllResources } from "@/lib/resources";
+import { advisorSiteConfig } from "@/config/siteConfig";
 
 export default async function ResourcesPage() {
 	const articles = getAllResources();
@@ -74,7 +75,7 @@ export default async function ResourcesPage() {
 							href="/contact"
 							className="text-teal-600 hover:text-teal-700"
 						>
-							contact me
+							{advisorSiteConfig.contactCopy.primaryCtaLabel}
 						</Link>
 						.
 					</p>

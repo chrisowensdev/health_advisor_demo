@@ -1,3 +1,4 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
 import Link from "next/link";
 
 const faqs = [
@@ -154,7 +155,7 @@ export default function FAQsPage() {
 						href="/contact"
 						className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-teal-600 shadow-sm hover:bg-teal-50"
 					>
-						Ask a Question or Book a Review
+						{advisorSiteConfig.contactCopy.primaryCtaLabel}
 					</Link>
 				</div>
 			</section>

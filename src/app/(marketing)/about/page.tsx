@@ -1,3 +1,4 @@
+import { advisorSiteConfig } from "@/config/siteConfig";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,10 +42,10 @@ export default function AboutPage() {
 								</div>
 								<div className="p-5">
 									<p className="text-sm font-semibold text-slate-900">
-										Your Advisor Name
+										{advisorSiteConfig.advisorName}
 									</p>
 									<p className="mt-1 text-xs text-slate-500">
-										Licensed Health & Medicare Advisor
+										{advisorSiteConfig.credentials}
 									</p>
 
 									<div className="mt-4 space-y-1 text-xs text-slate-600">
@@ -52,7 +53,9 @@ export default function AboutPage() {
 											<strong className="font-semibold text-slate-800">
 												States served:
 											</strong>{" "}
-											VA, NC, MD (example)
+											{advisorSiteConfig.serviceAreas.join(
+												", "
+											)}
 										</p>
 										<p>
 											<strong className="font-semibold text-slate-800">
@@ -187,13 +190,22 @@ export default function AboutPage() {
 										href="/contact"
 										className="inline-flex items-center justify-center rounded-full bg-teal-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 									>
-										Book a Free Coverage Review
+										{
+											advisorSiteConfig.contactCopy
+												.primaryCtaLabel
+										}
 									</Link>
 									<a
-										href="tel:5551234567"
+										href={`tel:${advisorSiteConfig.phone.replaceAll(
+											"-",
+											""
+										)}`}
 										className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-medium text-slate-800 hover:bg-slate-50"
 									>
-										Call with a Quick Question
+										{
+											advisorSiteConfig.contactCopy
+												.secondaryCtaLabel
+										}
 									</a>
 								</div>
 							</div>
@@ -209,6 +221,10 @@ export default function AboutPage() {
 						</div>
 					</div>
 				</div>
+				<p className="mt-10 rounded-md bg-yellow-50 p-3 text-sm text-yellow-900 text-center">
+					This is a demo website. Submissions are not sent to a live
+					inbox.
+				</p>
 			</section>
 		</main>
 	);

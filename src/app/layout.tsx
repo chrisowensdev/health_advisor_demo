@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 		siteName: "ClearPath - Health Advisors",
 		images: [
 			{
-				url: "/elevate_devworks_seo_image.png",
+				url: "/clearpath-opengraph.png",
 				width: 1200,
 				height: 630,
 				alt: advisorSiteConfig.brandName,
@@ -28,19 +28,19 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		images: [`${advisorSiteConfig.siteUrl}/elevate_devworks_seo_image.png`],
+		images: [`${advisorSiteConfig.siteUrl}/clearpath-opengraph.png`],
 	},
 	alternates: { canonical: advisorSiteConfig.siteUrl },
 
 	icons: {
 		// If you prefer explicit control in addition to app/icon.png:
-		icon: "/elevate-logo-symbol-48x48.png",
-		apple: "/apple-touch-icon.png",
+		icon: "/clearpath-icon-48x48.png",
+		apple: "/clearpath-icon-48x48.png",
 		other: [
 			{
 				rel: "mask-icon",
-				url: "/safari-pinned-tab.svg",
-				color: "#2175a2",
+				url: "/clearpath-icon-48x48.png",
+				color: "#00bba7",
 			},
 		],
 	},
