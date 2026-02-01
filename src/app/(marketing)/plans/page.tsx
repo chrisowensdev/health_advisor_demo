@@ -307,7 +307,7 @@ export default function PlansPage() {
 						in plain language.
 					</p>
 					<Link
-						href="/contact"
+						href="/contact/"
 						className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-teal-600 shadow-sm hover:bg-teal-50"
 					>
 						{advisorSiteConfig.contactCopy.primaryCtaLabel}

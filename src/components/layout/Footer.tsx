@@ -66,7 +66,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="/plans"
+										href="/plans/"
 										className="hover:text-slate-900"
 									>
 										Plans
@@ -74,7 +74,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="/about"
+										href="/about/"
 										className="hover:text-slate-900"
 									>
 										About
@@ -82,7 +82,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="/faqs"
+										href="/faqs/"
 										className="hover:text-slate-900"
 									>
 										FAQs
@@ -90,7 +90,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="/resources"
+										href="/resources/"
 										className="hover:text-slate-900"
 									>
 										Resources
@@ -98,7 +98,7 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="/contact"
+										href="/contact/"
 										className="hover:text-slate-900"
 									>
 										Contact
@@ -118,7 +118,7 @@ export default function Footer() {
 									<a
 										href={`tel:${advisorSiteConfig.phone.replaceAll(
 											"-",
-											""
+											"",
 										)}`}
 										className="text-teal-600 hover:text-teal-700"
 									>

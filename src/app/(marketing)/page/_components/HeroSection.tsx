@@ -56,7 +56,7 @@ export default function HeroSection() {
 					{/* CTAs */}
 					<div className="flex flex-wrap items-center gap-3">
 						<a
-							href="/contact"
+							href="/contact/"
 							className="rounded-full bg-teal-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 						>
 							{advisorSiteConfig.contactCopy.primaryCtaLabel}
@@ -64,7 +64,7 @@ export default function HeroSection() {
 						<a
 							href={`tel:${advisorSiteConfig.phone.replaceAll(
 								"-",
-								""
+								"",
 							)}`}
 							className="rounded-full border border-slate-600/60 bg-slate-900/40 px-5 py-2.5 text-sm font-medium text-slate-100 hover:bg-slate-900/70"
 						>
