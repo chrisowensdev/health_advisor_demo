@@ -86,8 +86,8 @@ export const advisorSiteConfig: AdvisorSiteConfig = {
 	},
 
 	legal: {
-		disclaimerUrl: "/legal/disclaimer",
-		privacyUrl: "/legal/privacy",
+		disclaimerUrl: "/legal/disclaimer/",
+		privacyUrl: "/legal/privacy/",
 		// termsUrl: "/legal/terms", // add later if you ever create one
 		notGovernmentAffiliationText:
 			"Not connected with or endorsed by the U.S. Government or the federal Medicare program.",

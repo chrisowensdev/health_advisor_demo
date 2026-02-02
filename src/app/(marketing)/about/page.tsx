@@ -54,7 +54,7 @@ export default function AboutPage() {
 												States served:
 											</strong>{" "}
 											{advisorSiteConfig.serviceAreas.join(
-												", "
+												", ",
 											)}
 										</p>
 										<p>
@@ -170,7 +170,7 @@ export default function AboutPage() {
 									</li>
 									<li>
 										• Help reviewing your plan each year, if
-										you’d like it
+										you'd like it
 									</li>
 								</ul>
 							</div>
@@ -181,13 +181,13 @@ export default function AboutPage() {
 									Ready to talk through your options?
 								</h3>
 								<p className="mt-2 text-sm text-slate-700">
-									If you’d like a second opinion on your
+									If you'd like a second opinion on your
 									current coverage or are choosing a plan for
-									the first time, I’m here to help.
+									the first time, I'm here to help.
 								</p>
 								<div className="mt-3 flex flex-wrap gap-3">
 									<Link
-										href="/contact"
+										href="/contact/"
 										className="inline-flex items-center justify-center rounded-full bg-teal-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 									>
 										{
@@ -198,7 +198,7 @@ export default function AboutPage() {
 									<a
 										href={`tel:${advisorSiteConfig.phone.replaceAll(
 											"-",
-											""
+											"",
 										)}`}
 										className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-medium text-slate-800 hover:bg-slate-50"
 									>

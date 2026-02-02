@@ -66,23 +66,23 @@ export default function Header() {
 					</Link>
 
 					<nav className="hidden items-center gap-6 text-sm text-slate-700 md:flex">
-						<a href="/plans" className="hover:text-slate-900">
+						<a href="/plans/" className="hover:text-slate-900">
 							Plans
 						</a>
-						<a href="/resources" className="hover:text-slate-900">
+						<a href="/resources/" className="hover:text-slate-900">
 							Resources
 						</a>
-						<a href="/about" className="hover:text-slate-900">
+						<a href="/about/" className="hover:text-slate-900">
 							About
 						</a>
-						<a href="/faqs" className="hover:text-slate-900">
+						<a href="/faqs/" className="hover:text-slate-900">
 							FAQs
 						</a>
 					</nav>
 
 					<div className="flex items-center gap-2">
 						<a
-							href="/contact"
+							href="/contact/"
 							className="hidden md:inline-flex rounded-full bg-teal-500 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-teal-600"
 						>
 							{advisorSiteConfig.contactCopy.primaryCtaLabel}
@@ -142,35 +142,35 @@ export default function Header() {
 						style={{ willChange: "transform, opacity" }}
 					>
 						<a
-							href="/plans"
+							href="/plans/"
 							onClick={() => setMobileOpen(false)}
 							className="block rounded-lg px-3 py-3 text-base hover:bg-neutral-50"
 						>
 							Plans
 						</a>
 						<a
-							href="/resources"
+							href="/resources/"
 							onClick={() => setMobileOpen(false)}
 							className="block rounded-lg px-3 py-3 text-base hover:bg-neutral-50"
 						>
 							Resources
 						</a>
 						<a
-							href="/about"
+							href="/about/"
 							onClick={() => setMobileOpen(false)}
 							className="block rounded-lg px-3 py-3 text-base hover:bg-neutral-50"
 						>
 							About
 						</a>
 						<a
-							href="/faqs"
+							href="/faqs/"
 							onClick={() => setMobileOpen(false)}
 							className="block rounded-lg px-3 py-3 text-base hover:bg-neutral-50"
 						>
 							FAQs
 						</a>
 						<a
-							href="/contact"
+							href="/contact/"
 							onClick={() => setMobileOpen(false)}
 							className="mt-2 block  text-center rounded-full bg-teal-500 px-4 py-2 font-semibold text-white shadow-sm hover:bg-teal-600"
 						>

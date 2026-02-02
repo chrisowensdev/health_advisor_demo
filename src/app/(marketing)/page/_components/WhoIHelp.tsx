@@ -28,7 +28,7 @@ export default function WhoIHelp() {
 							(Medigap) and Part D plans.
 						</p>
 						<a
-							href="/plans"
+							href="/plans/"
 							className="mt-4 inline-block text-sm font-medium text-teal-600 hover:text-teal-700"
 						>
 							Learn more →
@@ -46,7 +46,7 @@ export default function WhoIHelp() {
 							match your doctors, needs, and budget.
 						</p>
 						<a
-							href="/plans"
+							href="/plans/"
 							className="mt-4 inline-block text-sm font-medium text-teal-600 hover:text-teal-700"
 						>
 							Learn more →
@@ -64,7 +64,7 @@ export default function WhoIHelp() {
 							independent workers.
 						</p>
 						<a
-							href="/plans"
+							href="/plans/"
 							className="mt-4 inline-block text-sm font-medium text-teal-600 hover:text-teal-700"
 						>
 							Learn more →
@@ -82,7 +82,7 @@ export default function WhoIHelp() {
 							with no-obligation consultations.
 						</p>
 						<a
-							href="/plans"
+							href="/plans/"
 							className="mt-4 inline-block text-sm font-medium text-teal-600 hover:text-teal-700"
 						>
 							Learn more →

@@ -63,7 +63,7 @@ export default function HowItWorks() {
 				{/* CTA */}
 				<div className="mt-12 text-center">
 					<a
-						href="/contact"
+						href="/contact/"
 						className="rounded-full bg-teal-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-400"
 					>
 						{advisorSiteConfig.contactCopy.primaryCtaLabel}

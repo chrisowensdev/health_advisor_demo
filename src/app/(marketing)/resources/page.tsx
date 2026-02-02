@@ -38,7 +38,7 @@ export default async function ResourcesPage() {
 									{article.category}
 								</p>
 								<h2 className="mt-2 text-lg font-semibold text-slate-900">
-									<Link href={`/resources/${article.slug}`}>
+									<Link href={`/resources/${article.slug}/`}>
 										{article.title}
 									</Link>
 								</h2>
@@ -48,7 +48,7 @@ export default async function ResourcesPage() {
 								<div className="mt-4 flex items-center justify-between text-xs text-slate-500">
 									<span>
 										{new Date(
-											article.date
+											article.date,
 										).toLocaleDateString()}
 									</span>
 									{article.readingTime && (
@@ -57,7 +57,7 @@ export default async function ResourcesPage() {
 								</div>
 								<div className="mt-4">
 									<Link
-										href={`/resources/${article.slug}`}
+										href={`/resources/${article.slug}/`}
 										className="text-sm font-medium text-teal-600 hover:text-teal-700"
 									>
 										Read article →
@@ -72,7 +72,7 @@ export default async function ResourcesPage() {
 						are not a substitute for personalized advice. To discuss
 						your specific situation, please{" "}
 						<Link
-							href="/contact"
+							href="/contact/"
 							className="text-teal-600 hover:text-teal-700"
 						>
 							{advisorSiteConfig.contactCopy.primaryCtaLabel}
