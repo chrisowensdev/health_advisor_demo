@@ -44,6 +44,8 @@ export const metadata: Metadata = {
 			},
 		],
 	},
+	// Prevents Crawlability but allows for use
+	robots: { index: false, follow: true },
 };
 
 export default function RootLayout({
